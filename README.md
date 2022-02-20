@@ -11,16 +11,15 @@ Compiling and running: `make`
 Cleaning up repo: `make clean`
 
 ## Controls
+#### Basic Drawing
 Drawing: `Button-1` + `B1-Motion`
 
-Increasing window width: `Shift-Right`
+#### Changing Window Size
+Increasing window width: `Shift-Right`  
+Decreasing window width: `Shift-Left`   
+Increasing window height: `Shift-Down`  
+Decreasing window height: `Shift-Up`  
 
-Decreasing window width: `Shift-Left`
-
-Increasing window height: `Shift-Down`
-
-Decreasing window height: `Shift-Up`
-
-Undoing Lines: `Control-Z`
-
+#### Undo And Redo
+Undoing Lines: `Control-Z`  
 Redoing Lines: `Control-Y`
