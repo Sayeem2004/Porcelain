@@ -16,11 +16,15 @@ def bind_keystrokes():
     var.app.bind("<Down>", util.increase_height)
     var.app.bind("<Up>", util.decrease_height)
 
+    # Undoing and redoing
+    var.app.bind("<Control-z>", draw.undo_line)
+    var.app.bind("<Control-y>", draw.redo_line)
+
 # Main function
 def main():
     # Creating app screen
     var.app = tkinter.Tk()
-    var.app.geometry(str(var.xdim) + "x" + str(var.ydim))
+    var.app.geometry("".join([str(var.xdim) + "x" + str(var.ydim)]))
 
     # Creating canvas
     var.canvas = tkinter.Canvas(var.app, bg="black")
