@@ -1,6 +1,11 @@
 # Porcelain
 A simple whiteboard made from python
 
+## Requirements 
+Python 3 which can be downloaded from https://www.python.org/downloads/  
+
+Make which can be downloaded from http://ftp.gnu.org/gnu/make/ 
+
 ## Compilation Instructions
 Cloning the repo: `git clone git@github.com:Sayeem2004/Porcelain.git`       
 
