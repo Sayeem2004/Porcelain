@@ -11,10 +11,10 @@ def bind_keystrokes():
     var.canvas.bind("<B1-Motion>", draw.draw_line)
 
     # Changing window size
-    var.app.bind("<Right>", util.increase_width)
-    var.app.bind("<Left>", util.decrease_width)
-    var.app.bind("<Down>", util.increase_height)
-    var.app.bind("<Up>", util.decrease_height)
+    var.app.bind("<Shift-Right>", util.increase_width)
+    var.app.bind("<Shift-Left>", util.decrease_width)
+    var.app.bind("<Shift-Down>", util.increase_height)
+    var.app.bind("<Shift-Up>", util.decrease_height)
 
     # Undoing and redoing
     var.app.bind("<Control-z>", draw.undo_line)
