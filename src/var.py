@@ -12,3 +12,6 @@ lines, line_ind, ch_line = [], 0, 10
 
 # Color constants
 line_color, back_color = "white", "black"
+
+# Image directory name
+img_dir = "img/"

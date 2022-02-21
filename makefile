@@ -3,3 +3,6 @@ all:
 
 clean:
 	rm -rf src/__pycache__
+
+clear:
+	rm -rf img/

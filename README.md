@@ -17,8 +17,9 @@ Cleaning up repo: `make clean`
 
 ## Controls
 #### Basic Controls
-Drawing: `Button-1` + `B1-Motion`
-Exit: `Control-C`
+Drawing: `Button-1` + `B1-Motion`  
+Exit: `Control-C`  
+Save Current Screen: `Control-S`
 
 #### Changing Window Size
 Increasing window width: `Shift-Right`  

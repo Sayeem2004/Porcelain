@@ -1,5 +1,8 @@
 # Imports
+from datetime import datetime
+from PIL import Image
 import var
+import os
 
 # Function for increasing canvas width
 def increase_width(event):
@@ -55,3 +58,18 @@ def shift_down(event):
 def exit_app(event):
     var.app.destroy()
     exit(0)
+
+# Saving a screenshot of the board
+def save_image(event):
+    # Parsing file name from time
+    file = datetime.now().strftime("%d%m%Y%H%M%S")
+
+    # Saving as postscript
+    if (not os.path.exists(var.img_dir)):
+        os.makedirs(var.img_dir)
+    var.canvas.postscript(file="".join([var.img_dir, file, ".eps"]))
+
+    # Converting to png
+    img = Image.open("".join([var.img_dir, file, ".eps"]))
+    img.save("".join([var.img_dir, file, ".png"]), 'png')
+    os.remove("".join([var.img_dir, file, ".eps"]))

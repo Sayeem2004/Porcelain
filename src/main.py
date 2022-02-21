@@ -17,6 +17,7 @@ def bind_keystrokes():
     var.canvas.bind("<Button-1>", draw.get_coords)
     var.canvas.bind("<B1-Motion>", draw.draw_line)
     var.app.bind("<Control-c>", util.exit_app)
+    var.app.bind("<Control-s>", util.save_image)
 
     # Changing window size
     var.app.bind("<Shift-Right>", util.increase_width)
