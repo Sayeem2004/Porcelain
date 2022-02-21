@@ -2,10 +2,13 @@
 global canvas, app
 
 # Canvas dimension variables
-xdim, ydim, chdim = 750, 750, 5
+x_dim, y_dim, ch_dim = 750, 750, 25
 
 # Previous X and Y coordinates
-global px, py
+global prev_x, prev_y
 
 # List of lines and index
-lines, line_ind = [], 0
+lines, line_ind, ch_line = [], 0, 10
+
+# Color constants
+line_color, back_color = "white", "black"
