@@ -1,8 +1,15 @@
 # Imports
 import tkinter
+import signal
 import draw
 import util
 import var
+
+# Function that handles signals
+def signal_handler(sig, frame):
+    if (sig == signal.SIGINT):
+        var.app.destroy()
+        exit(0)
 
 # Function that binds keystrokes to commands
 def bind_keystrokes():
@@ -29,6 +36,9 @@ def bind_keystrokes():
 
 # Main function
 def main():
+    # Signal handling
+    signal.signal(signal.SIGINT, signal_handler)
+
     # Creating app screen
     var.app = tkinter.Tk()
     var.app.geometry("".join([str(var.x_dim) + "x" + str(var.y_dim)]))

@@ -53,4 +53,5 @@ def shift_down(event):
 
 # Function that exits the app
 def exit_app(event):
-    exit()
+    var.app.destroy()
+    exit(0)

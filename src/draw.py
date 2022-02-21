@@ -37,7 +37,7 @@ def draw_line(event):
 
 # Function for Ctrl-Z
 def undo_line(event):
-    # Undoing 3 lines
+    # Undoing multiple lines
     for _ in range(var.ch_line):
         # Casework for undoing lines
         if (var.line_ind > 0):
@@ -48,7 +48,7 @@ def undo_line(event):
 
 # Function for Ctrl-Y
 def redo_line(event):
-    # Redoing 3 lines
+    # Redoing multiple lines
     for _ in range(var.ch_line):
         # Casework for redoing lines
         if (var.line_ind < len(var.lines)-1):
