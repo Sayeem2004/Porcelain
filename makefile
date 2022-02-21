@@ -4,5 +4,5 @@ all:
 clean:
 	rm -rf src/__pycache__
 
-clear:
+remove:
 	rm -rf img/

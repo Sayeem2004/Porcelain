@@ -15,6 +15,8 @@ Compiling and running: `make`
 
 Cleaning up repo: `make clean`
 
+Removing saved images: `make remove`
+
 ## Controls
 #### Basic Controls
 Drawing: `Button-1` + `B1-Motion`  
@@ -28,10 +30,10 @@ Increasing window height: `Shift-Down`
 Decreasing window height: `Shift-Up`  
 
 #### Shifting Window
-Shifting lines right: `Right`
-Shifting lines left: `Left`
-Shifting lines up: `Up`
-Shifting lines down: `Down`
+Shifting lines right: `Right`  
+Shifting lines left: `Left`  
+Shifting lines up: `Up`  
+Shifting lines down: `Down`  
 
 #### Undo And Redo
 Undoing Lines: `Control-Z`  
