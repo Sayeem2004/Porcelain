@@ -38,3 +38,12 @@ Shifting lines down: `Down`
 #### Undo And Redo
 Undoing Lines: `Control-Z`  
 Redoing Lines: `Control-Y`
+
+#### Changing Color
+Changing background to black: `Control-D`  
+Changing background to white: `Control-W`  
+Changing line to black: `d`  
+Changing line to white: `w`  
+Changing line to red: `r`  
+Changing line to green: `g`  
+Changing line to blue: `b`  

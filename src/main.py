@@ -1,6 +1,7 @@
 # Imports
 import tkinter
 import signal
+import style
 import draw
 import util
 import var
@@ -34,6 +35,15 @@ def bind_keystrokes():
     # Undoing and redoing
     var.app.bind("<Control-z>", draw.undo_line)
     var.app.bind("<Control-y>", draw.redo_line)
+
+    # Changing colors
+    var.app.bind("<Control-d>", style.change_background_color)
+    var.app.bind("<Control-w>", style.change_background_color)
+    var.app.bind("<r>", style.change_line_color)
+    var.app.bind("<g>", style.change_line_color)
+    var.app.bind("<b>", style.change_line_color)
+    var.app.bind("<d>", style.change_line_color)
+    var.app.bind("<w>", style.change_line_color)
 
 # Main function
 def main():
