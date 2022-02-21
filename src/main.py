@@ -17,8 +17,10 @@ def bind_keystrokes():
     # Basic control
     var.canvas.bind("<Button-1>", draw.get_coords)
     var.canvas.bind("<B1-Motion>", draw.draw_line)
-    var.app.bind("<Control-c>", util.exit_app)
+    var.app.bind("<Control-w>", util.exit_app)
+    var.app.bind("<Command-w>", util.exit_app)
     var.app.bind("<Control-s>", util.save_image)
+    var.app.bind("<Command-s>", util.save_image)
 
     # Changing window size
     var.app.bind("<Shift-Right>", util.increase_width)
@@ -34,11 +36,15 @@ def bind_keystrokes():
 
     # Undoing and redoing
     var.app.bind("<Control-z>", draw.undo_line)
+    var.app.bind("<Command-z>", draw.undo_line)
     var.app.bind("<Control-y>", draw.redo_line)
+    var.app.bind("<Command-y>", draw.redo_line)
 
     # Changing colors
     var.app.bind("<Control-d>", style.change_background_color)
-    var.app.bind("<Control-w>", style.change_background_color)
+    var.app.bind("<Command-d>", style.change_background_color)
+    var.app.bind("<Control-l>", style.change_background_color)
+    var.app.bind("<Command-l>", style.change_background_color)
     var.app.bind("<r>", style.change_line_color)
     var.app.bind("<g>", style.change_line_color)
     var.app.bind("<b>", style.change_line_color)

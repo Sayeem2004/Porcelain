@@ -19,9 +19,9 @@ Removing saved images: `make remove`
 
 ## Controls
 #### Basic Controls
-Drawing: `Button-1` + `B1-Motion`  
-Exit: `Control-C`  
-Save Current Screen: `Control-S`
+Drawing: `Button-1` + `B1-Motion`   
+Exit: `Control-W` or `Command-W`   
+Save Current Screen: `Control-S` or `Command-S`
 
 #### Changing Window Size
 Increasing window width: `Shift-Right`  
@@ -36,12 +36,12 @@ Shifting lines up: `Up`
 Shifting lines down: `Down`  
 
 #### Undo And Redo
-Undoing Lines: `Control-Z`  
-Redoing Lines: `Control-Y`
+Undoing Lines: `Control-Z` or `Command-Z`   
+Redoing Lines: `Control-Y` or `Command-Y`   
 
 #### Changing Color
-Changing background to black: `Control-D`  
-Changing background to white: `Control-W`  
+Changing background to dark mode: `Control-D` or `Command-D`    
+Changing background to white mode: `Control-L` or `Command-L`  
 Changing line to black: `D`  
 Changing line to white: `W`  
 Changing line to red: `R`  

@@ -7,7 +7,7 @@ def change_background_color(event):
         var.back_color = "black"
         var.canvas.configure(bg=var.back_color)
         return
-    if (event.keysym == "w"):
+    if (event.keysym == "l"):
         var.back_color = "white"
         var.canvas.configure(bg=var.back_color)
         return
