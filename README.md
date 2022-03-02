@@ -21,7 +21,7 @@ Removing saved images: `make remove`
 #### Basic Controls
 Drawing: `Button-1` + `B1-Motion`   
 Exit: `Control-W` or `Command-W`   
-Save current screen: `Control-S` or `Command-S`
+Save current screen: `Control-S` or `Command-S`  
 Export current lines: `Control-P` or `Command-P`
 
 #### Changing Window Size
@@ -50,9 +50,9 @@ Changing line to green: `G`
 Changing line to blue: `B`  
 
 #### Changing Transparency
-Decreasing transparency: `[`
+Decreasing transparency: `[`  
 Increasing transparency: `]`
 
 #### Line Size
-Increasing line size: `=`
+Increasing line size: `=`  
 Decreasing line size: `-`
