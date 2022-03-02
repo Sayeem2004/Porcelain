@@ -72,7 +72,7 @@ def save_image(event):
 
     # Converting to png
     img = Image.open(file)
-    img.save(file, 'png')
+    img.save(file[:-3] + "png", 'png')
     os.remove(file)
     file = file[:-3] + "png"
 
