@@ -21,6 +21,8 @@ def bind_keystrokes():
     var.app.bind("<Command-w>", util.exit_app)
     var.app.bind("<Control-s>", util.save_image)
     var.app.bind("<Command-s>", util.save_image)
+    var.app.bind("<Control-p>", util.export_lines)
+    var.app.bind("<Command-p>", util.export_lines)
 
     # Changing window size
     var.app.bind("<Shift-Right>", util.increase_width)
@@ -51,6 +53,14 @@ def bind_keystrokes():
     var.app.bind("<d>", style.change_line_color)
     var.app.bind("<w>", style.change_line_color)
 
+    # Transparency
+    var.app.bind("<[>", util.decrease_transparency)
+    var.app.bind("<]>", util.increase_transparency)
+
+    # Line size
+    var.app.bind("<=>", style.increase_line_size)
+    var.app.bind("<minus>", style.decrease_line_size)
+
 # Main function
 def main():
     # Signal handling
@@ -61,7 +71,7 @@ def main():
     var.app.geometry("".join([str(var.x_dim) + "x" + str(var.y_dim)]))
 
     # Creating canvas
-    var.canvas = tkinter.Canvas(var.app, bg=var.back_color)
+    var.canvas = tkinter.Canvas(var.app, bg=var.back_color, width=var.x_dim, height=var.y_dim)
     var.canvas.pack(anchor='nw', fill='both', expand=1)
 
     # Binding Keystrokes

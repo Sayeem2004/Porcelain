@@ -5,7 +5,7 @@ import var
 def get_coords(event):
     # Drawing Point
     var.prev_x, var.prev_y = event.x, event.y
-    curr = var.canvas.create_line((var.prev_x, var.prev_y, var.prev_x+1, var.prev_y+1), fill=var.line_color, width=2)
+    curr = var.canvas.create_line((var.prev_x, var.prev_y, var.prev_x+1, var.prev_y+1), fill=var.line_color, width=var.line_width)
 
     # Adding point to list of canvas objects
     if (len(var.lines) == 0):
@@ -21,7 +21,7 @@ def get_coords(event):
 # Function for M1 button movement
 def draw_line(event):
     # Drawing line
-    curr = var.canvas.create_line((var.prev_x, var.prev_y, event.x, event.y), fill=var.line_color, width=2)
+    curr = var.canvas.create_line((var.prev_x, var.prev_y, event.x, event.y), fill=var.line_color, width=var.line_width)
     var.prev_x, var.prev_y = event.x, event.y
 
     # Adding line to list of canvas objects
@@ -55,10 +55,10 @@ def redo_line(event):
             var.line_ind += 1
             crds = var.lines[var.line_ind][1]
             var.canvas.delete(var.lines[var.line_ind][0])
-            curr = var.canvas.create_line(crds, fill=var.line_color, width=2)
+            curr = var.canvas.create_line(crds, fill=var.line_color, width=var.line_width)
             var.lines[var.line_ind][0] = curr
         else:
             crds = var.lines[var.line_ind][1]
             var.canvas.delete(var.lines[var.line_ind][0])
-            curr = var.canvas.create_line(crds, fill=var.line_color, width=2)
+            curr = var.canvas.create_line(crds, fill=var.line_color, width=var.line_width)
             var.lines[var.line_ind][0] = curr

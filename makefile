@@ -6,3 +6,4 @@ clean:
 
 remove:
 	rm -rf img/
+	rm -rf csv/

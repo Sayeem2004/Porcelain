@@ -29,3 +29,11 @@ def change_line_color(event):
     if (event.keysym == "w"):
         var.line_color = "white"
         return
+
+# Function to increase line size
+def increase_line_size(event):
+    var.line_width += 1
+
+# Function to decrease line size
+def decrease_line_size(event):
+    var.line_width = max(1, var.line_width-1)

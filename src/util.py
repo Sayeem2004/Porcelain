@@ -67,9 +67,43 @@ def save_image(event):
     # Saving as postscript
     if (not os.path.exists(var.img_dir)):
         os.makedirs(var.img_dir)
-    var.canvas.postscript(file="".join([var.img_dir, file, ".eps"]))
+    file = "".join([var.img_dir, file, ".eps"])
+    var.canvas.postscript(file=file)
 
     # Converting to png
-    img = Image.open("".join([var.img_dir, file, ".eps"]))
-    img.save("".join([var.img_dir, file, ".png"]), 'png')
-    os.remove("".join([var.img_dir, file, ".eps"]))
+    img = Image.open(file)
+    img.save(file, 'png')
+    os.remove(file)
+    file = file[:-3] + "png"
+
+    # Done message
+    print("Lines exported into img folder, filename: " + file)
+
+# Exporting lines into a csv file
+def export_lines(event):
+    # Parsing file name from time
+    file = datetime.now().strftime("%d%m%Y%H%M%S")
+
+    # Saving as postscript
+    if (not os.path.exists(var.csv_dir)):
+        os.makedirs(var.csv_dir)
+    file = "".join([var.csv_dir, file, ".csv"])
+    var.canvas.postscript(file=file)
+
+    fout = open(file, "w")
+    for line in var.lines:
+        fout.write(str(line[1]))
+        fout.write("\n")
+
+    # Done message
+    print("Lines exported into csv folder, filename: " + file)
+
+# Increasing transparency of the screen
+def increase_transparency(event):
+    var.trans = min(1, var.trans+0.05)
+    var.app.attributes("-alpha", var.trans)
+
+# Decreasing transparency of the screen
+def decrease_transparency(event):
+    var.trans = max(0, var.trans-0.05)
+    var.app.attributes("-alpha", var.trans)
